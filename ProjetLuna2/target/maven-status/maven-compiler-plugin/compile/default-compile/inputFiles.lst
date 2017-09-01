@@ -21,6 +21,7 @@ C:\Users\SDJ08\git\ProjetLuna2\ProjetLuna2\src\main\java\com\formation\domain\Ad
 C:\Users\SDJ08\git\ProjetLuna2\ProjetLuna2\src\main\java\com\formation\service\CommandeService.java
 C:\Users\SDJ08\git\ProjetLuna2\ProjetLuna2\src\main\java\com\formation\util\HibernateUtil.java
 C:\Users\SDJ08\git\ProjetLuna2\ProjetLuna2\src\main\java\com\formation\dao\ModeReglementDAO.java
+C:\Users\SDJ08\git\ProjetLuna2\ProjetLuna2\src\main\java\com\formation\action\InsertAction.java
 C:\Users\SDJ08\git\ProjetLuna2\ProjetLuna2\src\main\java\com\formation\DAOImpl\LigneDAOImpl.java
 C:\Users\SDJ08\git\ProjetLuna2\ProjetLuna2\src\main\java\com\formation\service\LigneService.java
 C:\Users\SDJ08\git\ProjetLuna2\ProjetLuna2\src\main\java\com\formation\DAOImpl\AdresseDAOImpl.java
