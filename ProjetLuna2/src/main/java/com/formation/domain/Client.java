@@ -50,6 +50,33 @@ public class Client implements Serializable {
 
 	private LocalDate date;
 
+	public Client(String nom, String prenom, boolean carte_fidele, LocalDate date, Adresse adresse) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.carte_fidele = carte_fidele;
+		this.date = date;
+		this.adresse = adresse;
+	}
+
+	
+	
+	public boolean isCarte_fidele() {
+		return carte_fidele;
+	}
+
+	public void setCarte_fidele(boolean carte_fidele) {
+		this.carte_fidele = carte_fidele;
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
 	@OneToOne(cascade=CascadeType.ALL)
 	private Adresse adresse;
 

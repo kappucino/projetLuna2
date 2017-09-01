@@ -7,7 +7,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 
 @Action("/login")
-@ResultPath("/WEB-INF/admin")
+@ResultPath("/admin")
 @Result(name = "login", location = "login.jsp")
 public class IndexAction extends ActionSupport{
 
