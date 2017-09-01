@@ -11,6 +11,6 @@ public interface CategorieDAO {
 	public void deleteCategorie(long  id);
 	public void updateCategorie(Categorie categorie);
 	public List<Categorie> getListCategorie();
-	
+	public Categorie find(long id);
 	
 }

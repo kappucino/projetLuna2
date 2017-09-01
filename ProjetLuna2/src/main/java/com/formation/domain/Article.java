@@ -32,6 +32,20 @@ public class Article implements Serializable {
 		this.date = date;
 	}
 
+	public Article(Categorie categorie, Set<Fournisseur> fournisseurs, String designation, int quantite,
+			double prixUnitaire, LocalDate date) {
+		super();
+		this.categorie = categorie;
+		this.fournisseurs = fournisseurs;
+		this.designation = designation;
+		this.quantite = quantite;
+		this.prixUnitaire = prixUnitaire;
+		this.date = date;
+	}
+	
+
+
+
 	@ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
 	private Set<Fournisseur> fournisseurs = new HashSet<>();
 	

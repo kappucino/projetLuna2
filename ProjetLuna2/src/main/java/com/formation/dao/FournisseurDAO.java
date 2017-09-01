@@ -10,4 +10,5 @@ public interface FournisseurDAO{
 	public void deleteFournisseur(long  id);
 	public void updateFournisseur(Fournisseur fournisseur);
 	public List<Fournisseur> getListFournisseur();
+	public Fournisseur find(long id);
 }

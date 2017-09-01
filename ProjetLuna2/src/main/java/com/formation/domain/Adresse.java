@@ -23,6 +23,18 @@ public class Adresse implements Serializable {
 		return id;
 	}
 
+	public Adresse() {
+		super();
+
+	}
+	
+	public Adresse(String rue, String codePostal, String ville) {
+		super();
+		this.rue = rue;
+		this.codePostal = codePostal;
+		this.ville = ville;
+	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}

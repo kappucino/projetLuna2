@@ -5,6 +5,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.formation.dao.AdressseDAO;
@@ -14,10 +15,14 @@ import com.formation.domain.Adresse;
 @Transactional
 public class AdresseDAOImpl implements AdressseDAO{
 	
+	@Autowired
 	private SessionFactory sessionFactory;
 	
-	public SessionFactory getSessionFactory() {
-		return sessionFactory;
+
+	
+	public void setSessionFactory(SessionFactory sessionFactory){
+		
+		this.sessionFactory = sessionFactory;
 	}
 	
 	@Override
@@ -44,7 +49,7 @@ public class AdresseDAOImpl implements AdressseDAO{
 	@Override
 	public List<Adresse> getListAdresse() {
 		// TODO Auto-generated method stub
-		return this.sessionFactory.getCurrentSession().createQuery("from adresse").list();
+		return this.sessionFactory.getCurrentSession().createQuery("from Adresse").list();
 	}
 	
 	public Adresse find(long id) {
