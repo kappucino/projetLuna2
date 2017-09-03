@@ -5,6 +5,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.formation.dao.ClientDAO;
@@ -15,11 +16,12 @@ import com.formation.domain.Client;
 public class ClientDAOImpl implements ClientDAO{
 
 	
-private SessionFactory sessionFactory;
+	@Autowired
+	private SessionFactory sessionFactory;
 	
-	public SessionFactory getSessionFactory() {
-		return sessionFactory;
+	public void setSessionFactory(SessionFactory sessionFactory){
 		
+		this.sessionFactory = sessionFactory;
 	}
 	
 	
@@ -48,7 +50,7 @@ private SessionFactory sessionFactory;
 	@Override
 	public List<Client> getListClient() {
 		// TODO Auto-generated method stub
-		return this.sessionFactory.getCurrentSession().createQuery("from client").list();
+		return this.sessionFactory.getCurrentSession().createQuery("from Client").list();
 	}
 	
 	public Client find(long id) {

@@ -8,6 +8,7 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -50,13 +51,14 @@ public class Client implements Serializable {
 
 	private LocalDate date;
 
-	public Client(String nom, String prenom, boolean carte_fidele, LocalDate date, Adresse adresse) {
+	public Client(String code,String nom, String prenom, boolean carte_fidele, LocalDate date, Adresse adresse) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
 		this.carte_fidele = carte_fidele;
 		this.date = date;
 		this.adresse = adresse;
+		this.code = code;
 	}
 
 	

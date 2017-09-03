@@ -17,16 +17,13 @@ import com.formation.service.ClientService;
 @Transactional
 public class ClientServiceImpl implements ClientService {
 	
-	private static ClientDAO clientDAO;
 	@Autowired
-	private SessionFactory sessionFactory;
+	private ClientDAO clientDAO;
+
 	
 
 	
-	public void setSessionFactory(SessionFactory sessionFactory){
-		
-		this.sessionFactory = sessionFactory;
-	}
+
 	@Override
 	public void createClient(Client client) {
 		// TODO Auto-generated method stub
