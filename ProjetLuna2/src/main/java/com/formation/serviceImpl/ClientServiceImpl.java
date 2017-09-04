@@ -49,7 +49,7 @@ public class ClientServiceImpl implements ClientService {
 	}
 
 	@Override
-	public Client find(long id) {
+	public Client find(String id) {
 		// TODO Auto-generated method stub
 		return clientDAO.find(id);
 	}

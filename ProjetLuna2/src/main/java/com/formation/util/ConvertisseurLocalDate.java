@@ -6,16 +6,22 @@ import java.time.LocalDate;
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 
-@Converter(autoApply = true)
-public class ConvertisseurLocalDate implements
-		AttributeConverter<LocalDate, Date> {
+
+public class ConvertisseurLocalDate implements AttributeConverter<LocalDate, Date> {
+	
 	@Override
 	public Date convertToDatabaseColumn(LocalDate entityValue) {
+		if (entityValue == null)
+            return null;
 		return Date.valueOf(entityValue);
 	}
 
 	@Override
 	public LocalDate convertToEntityAttribute(Date databaseValue) {
-		return databaseValue.toLocalDate();
+		if (databaseValue == null)
+            return null;
+        return databaseValue.toLocalDate();
+		//return databaseValue.toLocalDate();
+		
 	}
 }

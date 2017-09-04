@@ -2,6 +2,7 @@ com\formation\DAOImpl\AdresseDAOImpl.class
 com\formation\dao\CategorieDAO.class
 com\formation\util\HibernateUtil.class
 com\formation\util\Systeme.class
+com\formation\action\UpdateAction.class
 com\formation\util\ConvertisseurLocalDateTime.class
 com\formation\DAOImpl\CommandeDAOImpl.class
 com\formation\serviceImpl\FournisseurServiceImpl.class

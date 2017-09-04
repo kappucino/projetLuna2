@@ -10,5 +10,5 @@ public interface ClientService {
 	public void deleteClient(String  string);
 	public void updateClient(Client client);
 	public List<Client> getListClient();
-	public Client find(long id);
+	public Client find(String id);
 }

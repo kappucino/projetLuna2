@@ -53,7 +53,7 @@ public class ClientDAOImpl implements ClientDAO{
 		return this.sessionFactory.getCurrentSession().createQuery("from Client").list();
 	}
 	
-	public Client find(long id) {
+	public Client find(String id) {
 		// TODO Auto-generated method stub
 		Client client = (Client) this.sessionFactory.getCurrentSession().load(Client.class, id);
 		if(null != client){
