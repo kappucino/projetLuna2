@@ -33,7 +33,7 @@ public class ClientDAOImpl implements ClientDAO{
 	}
 
 	@Override
-	public void deleteClient(long id) {
+	public void deleteClient(String id) {
 		// TODO Auto-generated method stub
 		Client client = (Client) this.sessionFactory.getCurrentSession().load(Client.class, id);
 		if(null != client){

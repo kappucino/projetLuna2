@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="../css/index.css">
+ <link rel="stylesheet" type="text/css" href="/css/index.css">
 <title>Gestion des Clients</title>
 </head>
 <body>
@@ -18,13 +18,7 @@
 <div id="supprimer"><h1> <img alt="quitter" src="../css/images/gestion/Garbage-Open-48.png">Supprimer</h1></div>
 <div id="quitter"> <h1> <img alt="quitter" src="../css/images/connection/Stop-48.png">Quitter</h1></div>
 </div>
-<div id="client2" style="width: 500px;
-	height: 500px;
-	margin-left: 45%;
-	margin-top: 20%;
-	background-repeat: no-repeat;
-	position: absolute;
-	overflow: hidden;">
+<div id="client2" >
 	<h1>Inserer un nouveau client !</h1>
 	<s:form action="insert" method="post">
 			
@@ -37,10 +31,10 @@
 			
 			<s:submit name="Valider" value="Client" />
 	</s:form>
-	
+<div id="allcli">
 	<h2>All Customers</h2>
 
-<s:if test="clients.size() > 0">
+
 <table border="1px" cellpadding="8px">
 	<tr>
 		<th>Customer Id</th>
@@ -48,23 +42,40 @@
 		<th>prenom</th>
 		<th>Created Date</th>
 		<th>carte fidelite</th>
-		<th>adresse</th>
+		<th>rue</th>
+		<th>ville</th>
+		<th>Code Postal</th>
+		<th>Modifier</th>
+		<th>Supprimer</th>
 	</tr>
-	<s:iterator value="clients">
+	<s:iterator value="clients" >
 		<tr>
-			<td><s:property value="client.codes" /></td>
-			<td><s:property value="client.nom" /></td>
-			<td><s:property value="client.prenom" /></td>
-			<td><s:property value="client.date" /></td>
-			<td><s:property value="client.carte_fidele" /></td>
-			<td><s:property value="client.adresse" /></td>
-			<td><s:date name="createdDate" format="dd/MM/yyyy" /></td>
+<%-- 			<td><s:property value="code" /></td> --%>
+<%-- 			<td><s:property value="nom" /></td> --%>
+<%-- 			<td><s:property value="prenom" /></td> --%>
+<%-- 			<td><s:property value="date" /></td> --%>
+<%-- 			<td><s:property value="carte_fidele" /></td> --%>
+<%-- 			<s:iterator value="adresses" > --%>
+<%-- 			<td><s:property value="rue" /></td> --%>
+<%-- 			<td><s:property value="ville" /></td> --%>
+<%-- 			<td><s:property value="codePostal" /></td> --%>
+<%-- 			</s:iterator> --%>
+			<td><s:property value="code" /></td>
+			<td><s:property value="nom" /></td>
+			<td><s:property value="prenom" /></td>
+			<td><s:property value="date" /></td>
+			<td><s:property value="carte_fidele" /></td>			
+				<td><s:property value="adresse.rue" /></td> 
+ 			<td><s:property value="adresse.ville" /></td> 
+			<td><s:property value="adresse.codePostal" /></td>
+			<th><a href="#">Modifier</a></th>
+		<th><a  href="delete.action?code=<s:property value="code"/>">Supprimer</a></th>
 		</tr>
 	</s:iterator>
 </table>
-</s:if>
+
 <br/>
-	
+</div>
 	
 </div>
 </body>

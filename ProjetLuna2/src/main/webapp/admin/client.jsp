@@ -69,7 +69,7 @@
  			<td><s:property value="adresse.ville" /></td> 
 			<td><s:property value="adresse.codePostal" /></td>
 			<th><a href="#">Modifier</a></th>
-		<th><a  href="#">Supprimer</a></th>
+		<th><a  href="delete.action?code=<s:property value="code"/>">Supprimer</a></th>
 		</tr>
 	</s:iterator>
 </table>
